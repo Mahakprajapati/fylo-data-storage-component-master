@@ -80,8 +80,9 @@ background-color: var(--Very-Dark-Blue);
 .inner-line{
     background-image: linear-gradient(90deg,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
     border-radius: 1em;
-    width: 85%;
+    width: 81.5%;
     padding: 0.1em;
+    animation: innerline 2.5s ease;
 }
 .GB-container{
     display: flex;
@@ -95,6 +96,7 @@ background-color: var(--Very-Dark-Blue);
     border-radius: 50%;
      margin-inline-start: auto;
      margin-right: 0.2px;
+     animation: dot 2.5s ease;
 }
 .pop-up{
     background-color: #fff;
@@ -105,10 +107,48 @@ background-color: var(--Very-Dark-Blue);
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    animation: pop-up 2s ease;
+
    
+}
+@keyframes pop-up{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
 }
 .pop-up p{
     margin: 0;
+}
+.pop-up span{
+    animation: span 3s ease;
+
+}
+@keyframes span{
+    0%{
+        opacity: 0;
+    }20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }60%{
+        opacity: 0;
+    }80%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
 }
 
 @media(max-width:600px){
@@ -176,4 +216,21 @@ background-color: var(--Very-Dark-Blue);
     }
     
     
+}
+@keyframes dot {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 439px;
+    }
+} 
+
+@keyframes innerline {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 81.5%;
+    }
 }
